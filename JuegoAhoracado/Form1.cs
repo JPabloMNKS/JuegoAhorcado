@@ -73,9 +73,9 @@ namespace JuegoAhoracado
         private string[] oraciones = { "no te preocupes si no funciona bien si todo lo hiciera no tendrias trabajo",
             "cuando alguien dice quiero un lenguaje de programacion en el que solo tenga que decir lo que quiero que haga denle una paleta",
             "cualquiera puede hablar Enseñame el codigo",
-        "en teoria la teoría y la práctica son lo mismo en la practica no",
-        "medir el progreso en un proyecto de programacion por líneas de codigo es como medir la construccion de un aeroplano por su peso",
-        "la mayoria de los buenos programadores programan no porque esperan que les pagen o que el publico los adore, sino porque programar es divertido",
+        "en teoria la teoria y la practica son lo mismo en la practica no",
+        "medir el progreso en un proyecto de programacion por lineas de codigo es como medir la construccion de un aeroplano por su peso",
+        "la mayoria de los buenos programadores programan no porque esperan que les pagen o que el publico los adore sino porque programar es divertido",
         "controlar la complejidad es la esencia de la programacion"};
 
 
@@ -87,10 +87,10 @@ namespace JuegoAhoracado
             //          int aux = random.Next(0, oraciones.Length);
             //        actual = oraciones[aux];
             //      textBox1.Text = actual;
+            textBox1.Clear();
             Llenando();
             gpTeclado.Enabled = true;
             menosVida = 0;
-            textBox1.Clear();
             if (textBox_nombre.Text == "")
             {
                 txtJugador.Text = "Tu puedes Juagador 1";
@@ -145,6 +145,26 @@ namespace JuegoAhoracado
                 vida1.Visible = false;
                 gpTeclado.Enabled = false;
             }
+//            ganador();
+        }
+
+        private void ganador()
+        {
+            int aux2 = 0;
+            foreach (char letra in arr)
+            {
+                if (letra == '-')
+                {
+                    aux2++;
+                }
+                aux++;
+            }
+            if(aux2 == 0)
+            {
+                MessageBox.Show("Ganaste!!!");
+            }
+            aux2 = 0;
+            aux = 0;
         }
 
 
