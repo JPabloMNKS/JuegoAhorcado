@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelTop = new System.Windows.Forms.Panel();
@@ -37,7 +38,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox_nombre = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnA = new System.Windows.Forms.Button();
             this.btnS = new System.Windows.Forms.Button();
@@ -69,42 +69,29 @@
             this.txtPuntaje = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnÑ = new System.Windows.Forms.Button();
+            this.vida1 = new System.Windows.Forms.PictureBox();
+            this.vida2 = new System.Windows.Forms.PictureBox();
+            this.vida3 = new System.Windows.Forms.PictureBox();
+            this.vida4 = new System.Windows.Forms.PictureBox();
+            this.vida5 = new System.Windows.Forms.PictureBox();
+            this.gpTeclado = new System.Windows.Forms.GroupBox();
+            this.txtJugador = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vida1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vida2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vida3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vida4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vida5)).BeginInit();
+            this.gpTeclado.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnÑ);
-            this.panel1.Controls.Add(this.btnP);
-            this.panel1.Controls.Add(this.btnO);
-            this.panel1.Controls.Add(this.btnL);
-            this.panel1.Controls.Add(this.btnM);
-            this.panel1.Controls.Add(this.btnI);
-            this.panel1.Controls.Add(this.btnU);
-            this.panel1.Controls.Add(this.btnK);
-            this.panel1.Controls.Add(this.btnJ);
-            this.panel1.Controls.Add(this.btnN);
-            this.panel1.Controls.Add(this.btnB);
-            this.panel1.Controls.Add(this.btnY);
-            this.panel1.Controls.Add(this.btnT);
-            this.panel1.Controls.Add(this.btnH);
-            this.panel1.Controls.Add(this.btnG);
-            this.panel1.Controls.Add(this.btnV);
-            this.panel1.Controls.Add(this.btnC);
-            this.panel1.Controls.Add(this.btnR);
-            this.panel1.Controls.Add(this.btnE);
-            this.panel1.Controls.Add(this.btnF);
-            this.panel1.Controls.Add(this.btnD);
-            this.panel1.Controls.Add(this.btnX);
-            this.panel1.Controls.Add(this.btnZ);
-            this.panel1.Controls.Add(this.btnW);
-            this.panel1.Controls.Add(this.btnQ);
-            this.panel1.Controls.Add(this.btnS);
-            this.panel1.Controls.Add(this.btnA);
+            this.panel1.Controls.Add(this.gpTeclado);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 396);
             this.panel1.Name = "panel1";
@@ -114,6 +101,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.txtJugador);
+            this.panel2.Controls.Add(this.vida5);
+            this.panel2.Controls.Add(this.vida4);
+            this.panel2.Controls.Add(this.vida3);
+            this.panel2.Controls.Add(this.vida2);
+            this.panel2.Controls.Add(this.vida1);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.txtPuntaje);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -201,7 +194,6 @@
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.textBox_nombre);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(791, 59);
@@ -232,21 +224,6 @@
             this.textBox_nombre.Size = new System.Drawing.Size(145, 21);
             this.textBox_nombre.TabIndex = 0;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Sin(x)",
-            "Cos(x)",
-            "Tan(x)",
-            "x^2"});
-            this.comboBox1.Location = new System.Drawing.Point(28, 126);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 29);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "Funciones";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -268,9 +245,9 @@
             this.btnA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnA.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnA.ForeColor = System.Drawing.Color.White;
-            this.btnA.Location = new System.Drawing.Point(93, 48);
+            this.btnA.Location = new System.Drawing.Point(6, 53);
             this.btnA.Name = "btnA";
-            this.btnA.Size = new System.Drawing.Size(47, 35);
+            this.btnA.Size = new System.Drawing.Size(46, 35);
             this.btnA.TabIndex = 4;
             this.btnA.Text = "A";
             this.btnA.UseVisualStyleBackColor = false;
@@ -286,9 +263,9 @@
             this.btnS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnS.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS.ForeColor = System.Drawing.Color.White;
-            this.btnS.Location = new System.Drawing.Point(137, 48);
+            this.btnS.Location = new System.Drawing.Point(50, 53);
             this.btnS.Name = "btnS";
-            this.btnS.Size = new System.Drawing.Size(47, 35);
+            this.btnS.Size = new System.Drawing.Size(46, 35);
             this.btnS.TabIndex = 5;
             this.btnS.Text = "S";
             this.btnS.UseVisualStyleBackColor = false;
@@ -304,9 +281,9 @@
             this.btnW.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnW.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnW.ForeColor = System.Drawing.Color.White;
-            this.btnW.Location = new System.Drawing.Point(136, 7);
+            this.btnW.Location = new System.Drawing.Point(49, 12);
             this.btnW.Name = "btnW";
-            this.btnW.Size = new System.Drawing.Size(47, 35);
+            this.btnW.Size = new System.Drawing.Size(46, 35);
             this.btnW.TabIndex = 7;
             this.btnW.Text = "W";
             this.btnW.UseVisualStyleBackColor = false;
@@ -322,9 +299,9 @@
             this.btnQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQ.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQ.ForeColor = System.Drawing.Color.White;
-            this.btnQ.Location = new System.Drawing.Point(92, 7);
+            this.btnQ.Location = new System.Drawing.Point(5, 12);
             this.btnQ.Name = "btnQ";
-            this.btnQ.Size = new System.Drawing.Size(47, 35);
+            this.btnQ.Size = new System.Drawing.Size(46, 35);
             this.btnQ.TabIndex = 6;
             this.btnQ.Text = "Q";
             this.btnQ.UseVisualStyleBackColor = false;
@@ -340,9 +317,9 @@
             this.btnX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnX.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX.ForeColor = System.Drawing.Color.White;
-            this.btnX.Location = new System.Drawing.Point(199, 89);
+            this.btnX.Location = new System.Drawing.Point(112, 94);
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(47, 35);
+            this.btnX.Size = new System.Drawing.Size(46, 35);
             this.btnX.TabIndex = 9;
             this.btnX.Text = "X";
             this.btnX.UseVisualStyleBackColor = false;
@@ -358,9 +335,9 @@
             this.btnZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZ.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZ.ForeColor = System.Drawing.Color.White;
-            this.btnZ.Location = new System.Drawing.Point(155, 89);
+            this.btnZ.Location = new System.Drawing.Point(68, 94);
             this.btnZ.Name = "btnZ";
-            this.btnZ.Size = new System.Drawing.Size(47, 35);
+            this.btnZ.Size = new System.Drawing.Size(46, 35);
             this.btnZ.TabIndex = 8;
             this.btnZ.Text = "Z";
             this.btnZ.UseVisualStyleBackColor = false;
@@ -376,9 +353,9 @@
             this.btnV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnV.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnV.ForeColor = System.Drawing.Color.White;
-            this.btnV.Location = new System.Drawing.Point(287, 89);
+            this.btnV.Location = new System.Drawing.Point(200, 94);
             this.btnV.Name = "btnV";
-            this.btnV.Size = new System.Drawing.Size(47, 35);
+            this.btnV.Size = new System.Drawing.Size(46, 35);
             this.btnV.TabIndex = 15;
             this.btnV.Text = "V";
             this.btnV.UseVisualStyleBackColor = false;
@@ -394,9 +371,9 @@
             this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC.ForeColor = System.Drawing.Color.White;
-            this.btnC.Location = new System.Drawing.Point(243, 89);
+            this.btnC.Location = new System.Drawing.Point(156, 94);
             this.btnC.Name = "btnC";
-            this.btnC.Size = new System.Drawing.Size(47, 35);
+            this.btnC.Size = new System.Drawing.Size(46, 35);
             this.btnC.TabIndex = 14;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = false;
@@ -412,9 +389,9 @@
             this.btnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnR.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnR.ForeColor = System.Drawing.Color.White;
-            this.btnR.Location = new System.Drawing.Point(224, 7);
+            this.btnR.Location = new System.Drawing.Point(137, 12);
             this.btnR.Name = "btnR";
-            this.btnR.Size = new System.Drawing.Size(47, 35);
+            this.btnR.Size = new System.Drawing.Size(46, 35);
             this.btnR.TabIndex = 13;
             this.btnR.Text = "R";
             this.btnR.UseVisualStyleBackColor = false;
@@ -430,9 +407,9 @@
             this.btnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnE.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnE.ForeColor = System.Drawing.Color.White;
-            this.btnE.Location = new System.Drawing.Point(180, 7);
+            this.btnE.Location = new System.Drawing.Point(93, 12);
             this.btnE.Name = "btnE";
-            this.btnE.Size = new System.Drawing.Size(47, 35);
+            this.btnE.Size = new System.Drawing.Size(46, 35);
             this.btnE.TabIndex = 12;
             this.btnE.Text = "E";
             this.btnE.UseVisualStyleBackColor = false;
@@ -448,9 +425,9 @@
             this.btnF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnF.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnF.ForeColor = System.Drawing.Color.White;
-            this.btnF.Location = new System.Drawing.Point(225, 48);
+            this.btnF.Location = new System.Drawing.Point(138, 53);
             this.btnF.Name = "btnF";
-            this.btnF.Size = new System.Drawing.Size(47, 35);
+            this.btnF.Size = new System.Drawing.Size(46, 35);
             this.btnF.TabIndex = 11;
             this.btnF.Text = "F";
             this.btnF.UseVisualStyleBackColor = false;
@@ -466,9 +443,9 @@
             this.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnD.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnD.ForeColor = System.Drawing.Color.White;
-            this.btnD.Location = new System.Drawing.Point(181, 48);
+            this.btnD.Location = new System.Drawing.Point(94, 53);
             this.btnD.Name = "btnD";
-            this.btnD.Size = new System.Drawing.Size(47, 35);
+            this.btnD.Size = new System.Drawing.Size(46, 35);
             this.btnD.TabIndex = 10;
             this.btnD.Text = "D";
             this.btnD.UseVisualStyleBackColor = false;
@@ -484,9 +461,9 @@
             this.btnL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnL.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnL.ForeColor = System.Drawing.Color.White;
-            this.btnL.Location = new System.Drawing.Point(445, 48);
+            this.btnL.Location = new System.Drawing.Point(358, 53);
             this.btnL.Name = "btnL";
-            this.btnL.Size = new System.Drawing.Size(47, 35);
+            this.btnL.Size = new System.Drawing.Size(46, 35);
             this.btnL.TabIndex = 27;
             this.btnL.Text = "L";
             this.btnL.UseVisualStyleBackColor = false;
@@ -502,9 +479,9 @@
             this.btnM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnM.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnM.ForeColor = System.Drawing.Color.White;
-            this.btnM.Location = new System.Drawing.Point(419, 89);
+            this.btnM.Location = new System.Drawing.Point(332, 94);
             this.btnM.Name = "btnM";
-            this.btnM.Size = new System.Drawing.Size(47, 35);
+            this.btnM.Size = new System.Drawing.Size(46, 35);
             this.btnM.TabIndex = 26;
             this.btnM.Text = "M";
             this.btnM.UseVisualStyleBackColor = false;
@@ -520,9 +497,9 @@
             this.btnI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnI.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnI.ForeColor = System.Drawing.Color.White;
-            this.btnI.Location = new System.Drawing.Point(400, 7);
+            this.btnI.Location = new System.Drawing.Point(313, 12);
             this.btnI.Name = "btnI";
-            this.btnI.Size = new System.Drawing.Size(47, 35);
+            this.btnI.Size = new System.Drawing.Size(46, 35);
             this.btnI.TabIndex = 25;
             this.btnI.Text = "I";
             this.btnI.UseVisualStyleBackColor = false;
@@ -538,9 +515,9 @@
             this.btnU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnU.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnU.ForeColor = System.Drawing.Color.White;
-            this.btnU.Location = new System.Drawing.Point(356, 7);
+            this.btnU.Location = new System.Drawing.Point(269, 12);
             this.btnU.Name = "btnU";
-            this.btnU.Size = new System.Drawing.Size(47, 35);
+            this.btnU.Size = new System.Drawing.Size(46, 35);
             this.btnU.TabIndex = 24;
             this.btnU.Text = "U";
             this.btnU.UseVisualStyleBackColor = false;
@@ -556,9 +533,9 @@
             this.btnK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnK.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnK.ForeColor = System.Drawing.Color.White;
-            this.btnK.Location = new System.Drawing.Point(401, 48);
+            this.btnK.Location = new System.Drawing.Point(314, 53);
             this.btnK.Name = "btnK";
-            this.btnK.Size = new System.Drawing.Size(47, 35);
+            this.btnK.Size = new System.Drawing.Size(46, 35);
             this.btnK.TabIndex = 23;
             this.btnK.Text = "K";
             this.btnK.UseVisualStyleBackColor = false;
@@ -574,9 +551,9 @@
             this.btnJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJ.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJ.ForeColor = System.Drawing.Color.White;
-            this.btnJ.Location = new System.Drawing.Point(357, 48);
+            this.btnJ.Location = new System.Drawing.Point(270, 53);
             this.btnJ.Name = "btnJ";
-            this.btnJ.Size = new System.Drawing.Size(47, 35);
+            this.btnJ.Size = new System.Drawing.Size(46, 35);
             this.btnJ.TabIndex = 22;
             this.btnJ.Text = "J";
             this.btnJ.UseVisualStyleBackColor = false;
@@ -592,9 +569,9 @@
             this.btnN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnN.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnN.ForeColor = System.Drawing.Color.White;
-            this.btnN.Location = new System.Drawing.Point(375, 89);
+            this.btnN.Location = new System.Drawing.Point(288, 94);
             this.btnN.Name = "btnN";
-            this.btnN.Size = new System.Drawing.Size(47, 35);
+            this.btnN.Size = new System.Drawing.Size(46, 35);
             this.btnN.TabIndex = 21;
             this.btnN.Text = "N";
             this.btnN.UseVisualStyleBackColor = false;
@@ -610,9 +587,9 @@
             this.btnB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnB.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnB.ForeColor = System.Drawing.Color.White;
-            this.btnB.Location = new System.Drawing.Point(331, 89);
+            this.btnB.Location = new System.Drawing.Point(244, 94);
             this.btnB.Name = "btnB";
-            this.btnB.Size = new System.Drawing.Size(47, 35);
+            this.btnB.Size = new System.Drawing.Size(46, 35);
             this.btnB.TabIndex = 20;
             this.btnB.Text = "B";
             this.btnB.UseVisualStyleBackColor = false;
@@ -628,9 +605,9 @@
             this.btnY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnY.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnY.ForeColor = System.Drawing.Color.White;
-            this.btnY.Location = new System.Drawing.Point(312, 7);
+            this.btnY.Location = new System.Drawing.Point(225, 12);
             this.btnY.Name = "btnY";
-            this.btnY.Size = new System.Drawing.Size(47, 35);
+            this.btnY.Size = new System.Drawing.Size(46, 35);
             this.btnY.TabIndex = 19;
             this.btnY.Text = "Y";
             this.btnY.UseVisualStyleBackColor = false;
@@ -646,9 +623,9 @@
             this.btnT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnT.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnT.ForeColor = System.Drawing.Color.White;
-            this.btnT.Location = new System.Drawing.Point(268, 7);
+            this.btnT.Location = new System.Drawing.Point(181, 12);
             this.btnT.Name = "btnT";
-            this.btnT.Size = new System.Drawing.Size(47, 35);
+            this.btnT.Size = new System.Drawing.Size(46, 35);
             this.btnT.TabIndex = 18;
             this.btnT.Text = "T";
             this.btnT.UseVisualStyleBackColor = false;
@@ -664,9 +641,9 @@
             this.btnH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnH.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnH.ForeColor = System.Drawing.Color.White;
-            this.btnH.Location = new System.Drawing.Point(313, 48);
+            this.btnH.Location = new System.Drawing.Point(226, 53);
             this.btnH.Name = "btnH";
-            this.btnH.Size = new System.Drawing.Size(47, 35);
+            this.btnH.Size = new System.Drawing.Size(46, 35);
             this.btnH.TabIndex = 17;
             this.btnH.Text = "H";
             this.btnH.UseVisualStyleBackColor = false;
@@ -682,9 +659,9 @@
             this.btnG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnG.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnG.ForeColor = System.Drawing.Color.White;
-            this.btnG.Location = new System.Drawing.Point(269, 48);
+            this.btnG.Location = new System.Drawing.Point(182, 53);
             this.btnG.Name = "btnG";
-            this.btnG.Size = new System.Drawing.Size(47, 35);
+            this.btnG.Size = new System.Drawing.Size(46, 35);
             this.btnG.TabIndex = 16;
             this.btnG.Text = "G";
             this.btnG.UseVisualStyleBackColor = false;
@@ -700,9 +677,9 @@
             this.btnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnP.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnP.ForeColor = System.Drawing.Color.White;
-            this.btnP.Location = new System.Drawing.Point(489, 7);
+            this.btnP.Location = new System.Drawing.Point(402, 12);
             this.btnP.Name = "btnP";
-            this.btnP.Size = new System.Drawing.Size(47, 35);
+            this.btnP.Size = new System.Drawing.Size(46, 35);
             this.btnP.TabIndex = 29;
             this.btnP.Text = "P";
             this.btnP.UseVisualStyleBackColor = false;
@@ -718,9 +695,9 @@
             this.btnO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnO.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnO.ForeColor = System.Drawing.Color.White;
-            this.btnO.Location = new System.Drawing.Point(445, 7);
+            this.btnO.Location = new System.Drawing.Point(358, 12);
             this.btnO.Name = "btnO";
-            this.btnO.Size = new System.Drawing.Size(47, 35);
+            this.btnO.Size = new System.Drawing.Size(46, 35);
             this.btnO.TabIndex = 28;
             this.btnO.Text = "O";
             this.btnO.UseVisualStyleBackColor = false;
@@ -744,7 +721,7 @@
             this.txtPuntaje.AutoSize = true;
             this.txtPuntaje.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPuntaje.ForeColor = System.Drawing.Color.Black;
-            this.txtPuntaje.Location = new System.Drawing.Point(596, 29);
+            this.txtPuntaje.Location = new System.Drawing.Point(534, 157);
             this.txtPuntaje.Name = "txtPuntaje";
             this.txtPuntaje.Size = new System.Drawing.Size(97, 24);
             this.txtPuntaje.TabIndex = 5;
@@ -768,13 +745,106 @@
             this.btnÑ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnÑ.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnÑ.ForeColor = System.Drawing.Color.White;
-            this.btnÑ.Location = new System.Drawing.Point(489, 48);
+            this.btnÑ.Location = new System.Drawing.Point(402, 53);
             this.btnÑ.Name = "btnÑ";
-            this.btnÑ.Size = new System.Drawing.Size(47, 35);
+            this.btnÑ.Size = new System.Drawing.Size(46, 35);
             this.btnÑ.TabIndex = 30;
             this.btnÑ.Text = "Ñ";
             this.btnÑ.UseVisualStyleBackColor = false;
             this.btnÑ.Click += new System.EventHandler(this.BtnÑ_Click);
+            // 
+            // vida1
+            // 
+            this.vida1.Image = ((System.Drawing.Image)(resources.GetObject("vida1.Image")));
+            this.vida1.Location = new System.Drawing.Point(86, 29);
+            this.vida1.Name = "vida1";
+            this.vida1.Size = new System.Drawing.Size(107, 100);
+            this.vida1.TabIndex = 7;
+            this.vida1.TabStop = false;
+            // 
+            // vida2
+            // 
+            this.vida2.Image = ((System.Drawing.Image)(resources.GetObject("vida2.Image")));
+            this.vida2.Location = new System.Drawing.Point(208, 29);
+            this.vida2.Name = "vida2";
+            this.vida2.Size = new System.Drawing.Size(107, 100);
+            this.vida2.TabIndex = 8;
+            this.vida2.TabStop = false;
+            // 
+            // vida3
+            // 
+            this.vida3.Image = ((System.Drawing.Image)(resources.GetObject("vida3.Image")));
+            this.vida3.Location = new System.Drawing.Point(331, 29);
+            this.vida3.Name = "vida3";
+            this.vida3.Size = new System.Drawing.Size(107, 100);
+            this.vida3.TabIndex = 9;
+            this.vida3.TabStop = false;
+            // 
+            // vida4
+            // 
+            this.vida4.Image = ((System.Drawing.Image)(resources.GetObject("vida4.Image")));
+            this.vida4.Location = new System.Drawing.Point(458, 29);
+            this.vida4.Name = "vida4";
+            this.vida4.Size = new System.Drawing.Size(107, 100);
+            this.vida4.TabIndex = 10;
+            this.vida4.TabStop = false;
+            // 
+            // vida5
+            // 
+            this.vida5.Image = ((System.Drawing.Image)(resources.GetObject("vida5.Image")));
+            this.vida5.Location = new System.Drawing.Point(583, 29);
+            this.vida5.Name = "vida5";
+            this.vida5.Size = new System.Drawing.Size(107, 100);
+            this.vida5.TabIndex = 11;
+            this.vida5.TabStop = false;
+            // 
+            // gpTeclado
+            // 
+            this.gpTeclado.Controls.Add(this.btnH);
+            this.gpTeclado.Controls.Add(this.btnÑ);
+            this.gpTeclado.Controls.Add(this.btnA);
+            this.gpTeclado.Controls.Add(this.btnP);
+            this.gpTeclado.Controls.Add(this.btnS);
+            this.gpTeclado.Controls.Add(this.btnO);
+            this.gpTeclado.Controls.Add(this.btnQ);
+            this.gpTeclado.Controls.Add(this.btnL);
+            this.gpTeclado.Controls.Add(this.btnW);
+            this.gpTeclado.Controls.Add(this.btnM);
+            this.gpTeclado.Controls.Add(this.btnZ);
+            this.gpTeclado.Controls.Add(this.btnI);
+            this.gpTeclado.Controls.Add(this.btnX);
+            this.gpTeclado.Controls.Add(this.btnU);
+            this.gpTeclado.Controls.Add(this.btnD);
+            this.gpTeclado.Controls.Add(this.btnK);
+            this.gpTeclado.Controls.Add(this.btnF);
+            this.gpTeclado.Controls.Add(this.btnJ);
+            this.gpTeclado.Controls.Add(this.btnE);
+            this.gpTeclado.Controls.Add(this.btnN);
+            this.gpTeclado.Controls.Add(this.btnR);
+            this.gpTeclado.Controls.Add(this.btnB);
+            this.gpTeclado.Controls.Add(this.btnC);
+            this.gpTeclado.Controls.Add(this.btnY);
+            this.gpTeclado.Controls.Add(this.btnV);
+            this.gpTeclado.Controls.Add(this.btnT);
+            this.gpTeclado.Controls.Add(this.btnG);
+            this.gpTeclado.Enabled = false;
+            this.gpTeclado.Location = new System.Drawing.Point(86, 0);
+            this.gpTeclado.Name = "gpTeclado";
+            this.gpTeclado.Size = new System.Drawing.Size(558, 133);
+            this.gpTeclado.TabIndex = 31;
+            this.gpTeclado.TabStop = false;
+            this.gpTeclado.Text = "Teclado";
+            // 
+            // txtJugador
+            // 
+            this.txtJugador.AutoSize = true;
+            this.txtJugador.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJugador.ForeColor = System.Drawing.Color.Black;
+            this.txtJugador.Location = new System.Drawing.Point(41, 157);
+            this.txtJugador.Name = "txtJugador";
+            this.txtJugador.Size = new System.Drawing.Size(121, 24);
+            this.txtJugador.TabIndex = 12;
+            this.txtJugador.Text = "Tu puedes ";
             // 
             // Form1
             // 
@@ -794,6 +864,12 @@
             this.panelTop.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vida1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vida2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vida3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vida4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vida5)).EndInit();
+            this.gpTeclado.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -809,7 +885,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox_nombre;
         private System.Windows.Forms.Button btnA;
         private System.Windows.Forms.Button btnL;
@@ -841,6 +916,13 @@
         private System.Windows.Forms.Label txtPuntaje;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnÑ;
+        private System.Windows.Forms.PictureBox vida5;
+        private System.Windows.Forms.PictureBox vida4;
+        private System.Windows.Forms.PictureBox vida3;
+        private System.Windows.Forms.PictureBox vida2;
+        private System.Windows.Forms.PictureBox vida1;
+        private System.Windows.Forms.GroupBox gpTeclado;
+        private System.Windows.Forms.Label txtJugador;
     }
 }
 
